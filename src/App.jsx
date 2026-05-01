@@ -278,15 +278,15 @@ export default function App() {
       {/* Modal / Details View */}
       {selectedMetric && (
         <div 
-          className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm flex items-center justify-center p-4 z-50"
+          className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm flex items-center justify-center p-4 z-50 cursor-pointer"
           onClick={() => setSelectedMetric(null)}
         >
           <div 
-            className="bg-white rounded-3xl w-full max-w-2xl overflow-y-auto max-h-[90vh] shadow-2xl animate-in fade-in zoom-in-95 duration-200"
+            className="bg-white rounded-3xl w-full max-w-2xl flex flex-col max-h-[90vh] shadow-2xl animate-in fade-in zoom-in-95 duration-200 cursor-default"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
-            <div className={`p-6 sm:p-8 flex items-start justify-between ${selectedMetric.bgColor}`}>
+            <div className={`p-6 sm:p-8 flex items-start justify-between flex-shrink-0 ${selectedMetric.bgColor}`}>
               <div className="flex items-center gap-4">
                 <div className={`p-4 bg-white rounded-2xl shadow-sm ${selectedMetric.color}`}>
                   <selectedMetric.icon size={32} strokeWidth={2} />
@@ -309,8 +309,8 @@ export default function App() {
               </button>
             </div>
 
-            {/* Modal Body */}
-            <div className="p-6 sm:p-8">
+            {/* Modal Body - Scrollable */}
+            <div className="p-6 sm:p-8 overflow-y-auto flex-grow">
               <div className="space-y-6">
                 <div>
                   <h4 className="flex items-center gap-2 text-lg font-bold text-slate-900 mb-2">
@@ -352,7 +352,7 @@ export default function App() {
             </div>
             
             {/* Modal Footer */}
-            <div className="p-4 bg-slate-50 border-t border-slate-200 text-center">
+            <div className="p-4 bg-slate-50 border-t border-slate-200 text-center flex-shrink-0">
               <button 
                 onClick={() => setSelectedMetric(null)}
                 className="px-6 py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-medium rounded-xl transition-colors"
