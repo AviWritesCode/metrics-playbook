@@ -59,12 +59,12 @@ const metricsData = [
     icon: LifeBuoy,
     color: 'text-cyan-600',
     bgColor: 'bg-cyan-100',
-    definition: 'Measures escalation and resolution pathways. A lower score indicates that you are successfully resolving issues on the frontline without unnecessary transfers or rescues.',
-    whyItMatters: 'First Contact Resolution is crucial for member satisfaction. The more we resolve without transferring, the better the member experience.',
+    definition: "Measures the percentage of calls where we mark 'No' in the resolution questionnaire. Submitting 'No' more than 90% of the time indicates we are likely failing to properly track and escalate member complaints.",
+    whyItMatters: "Missing complaints has massive downstream effects: USAA pays regulatory fines to the CFPB, our members go without a proper resolution, and our site pays financial penalties on our contract with USAA—which directly drains the budget we use to do fun events like cookouts and catering for our agents.",
     tips: [
-      'Lean on your Knowledge Center (KC) and Slack support channels before transferring.',
-      'Practice empathy and take ownership of the member\'s issue.',
-      'Only escalate when it is strictly required by policy.'
+      'Take your time on the resolution questionnaire to ensure every "No" is accurately justified.',
+      'Understand the specific criteria that define a CFPB complaint to identify them instantly.',
+      'Prioritize member protection by logging all concerns, ensuring they reach the proper escalation path.'
     ]
   },
   {
