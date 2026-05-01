@@ -277,8 +277,14 @@ export default function App() {
 
       {/* Modal / Details View */}
       {selectedMetric && (
-        <div className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-3xl w-full max-w-2xl overflow-hidden shadow-2xl animate-in fade-in zoom-in-95 duration-200">
+        <div 
+          className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm flex items-center justify-center p-4 z-50"
+          onClick={() => setSelectedMetric(null)}
+        >
+          <div 
+            className="bg-white rounded-3xl w-full max-w-2xl overflow-y-auto max-h-[90vh] shadow-2xl animate-in fade-in zoom-in-95 duration-200"
+            onClick={(e) => e.stopPropagation()}
+          >
             {/* Modal Header */}
             <div className={`p-6 sm:p-8 flex items-start justify-between ${selectedMetric.bgColor}`}>
               <div className="flex items-center gap-4">
